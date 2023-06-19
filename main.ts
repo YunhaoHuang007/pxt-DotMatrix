@@ -50,6 +50,13 @@ namespace DotMatrix {
     }
 
     //% group="8X8点阵屏" weight=70
+    //% block="Set brightness level $level" 
+    //% level.min=0 level.max=15 level.defl=15 
+    export function SetBrightness(level: number) {
+        WriteRegister(MAX7219_REG_INTENSITY, level)
+    }
+
+    //% group="8X8点阵屏" weight=70
     //% block="Show dot X %x| Y %y"
     //% x.min=0 x.max=7
     //% y.min=0 y.max=7
