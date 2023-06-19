@@ -96,8 +96,7 @@ namespace DotMatrix {
     }
 
     //% group="8X8点阵屏" weight=70
-    //% block="%text"
-    //% text.defl="B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000"
+    //% block="%text"	
     //% blockExternalInputs=true
     export function CusGraphArray(text: string): string {
         text = "B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000"
