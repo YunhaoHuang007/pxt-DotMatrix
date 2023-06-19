@@ -50,8 +50,8 @@ namespace DotMatrix {
     }
 
     //% group="8X8点阵屏" weight=70
-    //% block="Set brightness level $level" 
-    //% level.min=0 level.max=15 level.defl=15 
+    //% block="Set brightness level $level"
+    //% level.min=0 level.max=15 level.defl=15
     export function SetBrightness(level: number) {
         WriteRegister(MAX7219_REG_INTENSITY, level)
     }
@@ -66,4 +66,40 @@ namespace DotMatrix {
         WriteRegister(x, data)
     }
 
+    //% group="8X8点阵屏" weight=70
+    //% block="Show customize array %text"
+    export function ShowCustText(text: string) {
+        let tempTextArray: string[] = []
+        let currentIndex = 0
+        let currentChr = ""
+        let currentNum = 0
+        let columnNum = 0
+
+        if (text != null && text.length >= 0) {
+            while (currentIndex < text.length) {
+                tempTextArray.push(text.substr(currentIndex + 1, 8))
+                currentIndex += 10
+            }
+            for (let i = 0; i < tempTextArray.length; i++) {
+                columnNum = 0
+                for (let j = tempTextArray[i].length - 1; j >= 0; j--) {
+                    currentChr = tempTextArray[i].substr(j, 1)
+                    if (currentChr == "1" || currentChr == "0")
+                        currentNum = parseInt(currentChr)
+                    else
+                        currentNum = 0
+                    columnNum += (2 ** (tempTextArray[i].length - j - 1)) * currentNum
+                }
+                WriteRegister(i + 1, columnNum)
+            }
+        }
+    }
+
+    //% group="8X8点阵屏" weight=70
+    //% block="%text"
+    //% blockExternalInputs=true
+    export function CusGraphArray(text: string): string {
+        text = "B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000"
+        return text
+    }
 }

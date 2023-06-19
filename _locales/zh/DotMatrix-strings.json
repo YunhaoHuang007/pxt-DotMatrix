@@ -4,5 +4,6 @@
     "DotMatrix.ClearAll|block": "关闭所有LED",
     "DotMatrix.LightAll|block": "打开所有LED",
     "DotMatrix.SetBrightness|block": "设置亮度%level",
-    "DotMatrix.Showdot|block": "打开点X%x|Y%y"
+    "DotMatrix.Showdot|block": "打开点X%x|Y%y",
+    "DotMatrix.ShowCustText|block": "显示自定义数组%text"
 }
