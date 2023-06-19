@@ -68,6 +68,7 @@ namespace DotMatrix {
 
     //% group="8X8点阵屏" weight=70
     //% block="Show customize array %text"
+    //% text.defl="B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000"
     export function ShowCustText(text: string) {
         let tempTextArray: string[] = []
         let currentIndex = 0
@@ -93,13 +94,5 @@ namespace DotMatrix {
                 WriteRegister(i + 1, columnNum)
             }
         }
-    }
-
-    //% group="8X8点阵屏" weight=70
-    //% block="%text"	
-    //% blockExternalInputs=true
-    export function CusGraphArray(text: string): string {
-        text = "B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000"
-        return text
     }
 }
