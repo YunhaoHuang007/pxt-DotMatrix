@@ -38,23 +38,23 @@ namespace DotMatrix {
     //% group="8X8点阵屏" weight=70
     //% block="Clear all LEDs"
     export function ClearAll() {
-        for (let i = 0; i < 8; i++)
+        for (let i = 1; i <= 8; i++)
             WriteRegister(i, 0)
     }
 
     //% group="8X8点阵屏" weight=70
     //% block="Light all LEDs"
     export function LightAll() {
-        for (let i = 0; i < 8; i++)
+        for (let i = 1; i <= 8; i++)
             WriteRegister(i, 0xFF)
     }
 
     //% group="8X8点阵屏" weight=70
     //% block="Show dot X %x| Y %y"
-    //% x.min=0 x.max=7
-    //% y.min=0 y.max=7
+    //% x.min=1 x.max=8
+    //% y.min=1 y.max=8
     export function Showdot(x: number, y: number) {
-        let data = 0x80 >> (y + 1)
+        let data = 0x80 >> y
         WriteRegister(x, data)
     }
 
