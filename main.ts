@@ -54,7 +54,7 @@ namespace DotMatrix {
     //% x.min=1 x.max=8
     //% y.min=1 y.max=8
     export function Showdot(x: number, y: number) {
-        let data = 0x80 >> y
+        let data = 0x80 >> (y - 1)
         WriteRegister(x, data)
     }
 
