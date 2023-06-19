@@ -10,7 +10,7 @@ namespace DotMatrix {
     let MAX7219_PIN_CS = DigitalPin.P1
 
     //% group="8X8点阵屏" weight=80
-    //% block="Initialize MAX7219 |CS:%cs |MOSI:%mosi |MISO:%miso |SCK:%sck"
+    //% block="Initialize MAX7219 |CS:%cs |MOSI:%mosi |SCK:%sck"
     //% cs.defl=DigitalPin.P1 mosi.defl=DigitalPin.P2 sck.defl=DigitalPin.P0
     export function InitMAX7219(cs: DigitalPin, mosi: DigitalPin, sck: DigitalPin) {
         MAX7219_PIN_CS = cs
@@ -49,13 +49,13 @@ namespace DotMatrix {
             WriteRegister(i, 0xFF)
     }
 
-	//% group="8X8点阵屏" weight=70
-	//% block="Show dot X %x| Y %y"
-	//% x.min=0 x.max=7
-	//% y.min=0 y.max=7
-	export function Showdot(x: number, y: number) {
+    //% group="8X8点阵屏" weight=70
+    //% block="Show dot X %x| Y %y"
+    //% x.min=0 x.max=7
+    //% y.min=0 y.max=7
+    export function Showdot(x: number, y: number) {
         let data = 0x80 >> (y + 1)
         WriteRegister(x, data)
     }
-}
 
+}
