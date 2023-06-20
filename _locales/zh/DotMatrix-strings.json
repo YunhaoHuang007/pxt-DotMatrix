@@ -1,5 +1,5 @@
 {
-    "DotMatrix|block": "点阵屏",
+    "DotMatrix|block": "8x8点阵屏",
     "DotMatrix.InitMAX7219|block": "初始化点阵|CS%cs|DIN%mosi|CLK%sck",
     "DotMatrix.ClearAll|block": "关闭所有LED",
     "DotMatrix.LightAll|block": "打开所有LED",
