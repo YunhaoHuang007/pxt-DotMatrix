@@ -1,5 +1,5 @@
 {
-    "name": "DotMatrix",
+    "name": "pxt-DotMatrix",
     "version": "1.0.0",
     "description": "DotMatrix Package for micro:bit",
     "license": "MIT",
