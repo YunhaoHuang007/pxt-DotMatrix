@@ -1,7 +1,7 @@
 {
     "name": "DotMatrix",
-    "version": "1.0.1",
-    "description": "dotmatrix for makecode",
+    "version": "1.0.0",
+    "description": "DotMatrix Package for micro:bit",
     "license": "MIT",
     "dependencies": {
         "core": "*",
