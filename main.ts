@@ -1,4 +1,4 @@
-//% color="#6167d5" weight=10 icon="\uf108" block="DotMatrix"
+//% color="#6167d5" weight=10 icon="\uf108" block="8x8点阵"
 namespace DotMatrix {
     let MAX7219_REG_DECODEMODE = 0x9
     let MAX7219_REG_INTENSITY = 0xA
@@ -10,7 +10,6 @@ namespace DotMatrix {
 
     //% parts="DotMatrix" blockId="InitMAX7219" weight=80
     //% block="Initialize MAX7219 |CS %cs |MOSI %mosi |SCK %sck"
-    //% cs.defl=DigitalPin.P1 mosi.defl=DigitalPin.P2 sck.defl=DigitalPin.P0
     export function InitMAX7219(cs: DigitalPin, mosi: DigitalPin, sck: DigitalPin) {
         MAX7219_PIN_CS = cs
 
@@ -50,7 +49,6 @@ namespace DotMatrix {
 
     //% parts="DotMatrix" blockId="SetBrightness" weight=70
     //% block="Set brightness level %level"
-    //% level.min=0 level.max=15 level.defl=15
     export function SetBrightness(level: number) {
         WriteRegister(MAX7219_REG_INTENSITY, level)
     }
@@ -67,7 +65,6 @@ namespace DotMatrix {
 
     //% parts="DotMatrix" blockId="ShowCustText" weight=70
     //% block="Show customize array %text"
-    //% text.defl="B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000"
     export function ShowCustText(text: string) {
         let tempTextArray: string[] = []
         let currentIndex = 0
