@@ -9,8 +9,8 @@
     },
     "files": [
         "README.md",
-        "main.ts",
-        "_locales/zh/DotMatrix-strings.json"
+        "_locales/zh/DotMatrix-strings.json",
+        "main.ts"
     ],
     "public": true,
     "targetVersions": {
