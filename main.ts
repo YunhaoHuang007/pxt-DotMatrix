@@ -7,7 +7,7 @@ namespace DotMatrix {
     let MAX7219_REG_SHUTDOWN = 0xC
     let MAX7219_REG_DISPLAYTEST = 0xF
 
-    let MAX7219_PIN_CS = DigitalPin.P1
+    let MAX7219_PIN_CS = DigitalPin.P1;
 
     //% group="8X8点阵屏" weight=80
     //% block="Initialize MAX7219 |CS %cs |MOSI %mosi |SCK %sck"
