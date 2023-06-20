@@ -9,7 +9,7 @@ namespace DotMatrix {
     let MAX7219_PIN_CS = DigitalPin.P1
 
     //% parts="DotMatrix" blockId="InitMAX7219" weight=80
-    //% block="Initialize MAX7219 |CS %cs |MOSI %mosi |SCK %sck"
+    //% block="初始化 MAX7219 |CS %cs |MOSI %mosi |SCK %sck"
     export function InitMAX7219(cs: DigitalPin, mosi: DigitalPin, sck: DigitalPin) {
         MAX7219_PIN_CS = cs
 
