@@ -2,6 +2,7 @@
     "name": "pxt-dotmatrix",
     "version": "1.0.0",
     "description": "",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "radio": "*",
