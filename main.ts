@@ -49,7 +49,7 @@ namespace DotMatrix {
     }
 
     //% parts="DotMatrix" blockId="SetBrightness" weight=70
-    //% block="Set brightness level $level"
+    //% block="Set brightness level %level"
     //% level.min=0 level.max=15 level.defl=15
     export function SetBrightness(level: number) {
         WriteRegister(MAX7219_REG_INTENSITY, level)
