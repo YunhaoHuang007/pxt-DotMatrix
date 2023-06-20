@@ -1,6 +1,5 @@
 //% color="#6167d5" weight=10 icon="\uf108" block="DotMatrix"
 namespace DotMatrix {
-
     let MAX7219_REG_DECODEMODE = 0x9
     let MAX7219_REG_INTENSITY = 0xA
     let MAX7219_REG_SCANLIMIT = 0xB
