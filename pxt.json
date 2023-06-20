@@ -13,12 +13,5 @@
         "main.ts"
     ],
     "public": true,
-    "targetVersions": {
-        "target": "6.0.8",
-        "targetId": "microbit"
-    },
-    "supportedTargets": [
-        "microbit"
-    ],
     "preferredEditor": "tsprj"
 }
