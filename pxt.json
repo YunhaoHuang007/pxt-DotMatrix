@@ -12,7 +12,6 @@
         "main.ts",
         "_locales/zh/DotMatrix-strings.json"
     ],
-    "testFiles": [],
     "public": true,
     "targetVersions": {
         "target": "6.0.8",
