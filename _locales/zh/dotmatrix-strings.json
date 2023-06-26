@@ -1,0 +1,9 @@
+{
+    "dotmatrix|block": "点阵屏",
+    "dotmatrix.InitMAX7219|block": "初始化点阵|CS%cs|DIN%mosi|CLK%sck",
+    "dotmatrix.ClearAll|block": "关闭所有LED",
+    "dotmatrix.LightAll|block": "打开所有LED",
+    "dotmatrix.SetBrightness|block": "设置亮度%level",
+    "dotmatrix.Showdot|block": "打开点X%x|Y%y",
+    "dotmatrix.ShowCustText|block": "显示自定义数组%text"
+}
