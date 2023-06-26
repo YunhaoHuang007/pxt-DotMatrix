@@ -1,7 +1,7 @@
 {
     "name": "dotmatrix",
     "version": "1.0.0",
-    "description": "DotMatrix Package",
+    "description": "Dotmatrix Package",
     "license": "MIT",
     "dependencies": {
         "core": "*",
