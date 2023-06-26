@@ -9,7 +9,6 @@
     },
     "files": [
         "README.md",
-        "_locales/zh/DotMatrix-strings.json",
         "main.ts"
     ],
     "public": true,
