@@ -9,7 +9,7 @@ namespace DotMatrix {
 
     let MAX7219_PIN_CS = DigitalPin.P1
 
-    //% blockId="InitMAX7219" weight=80
+    //% group="8X8点阵屏" blockId="InitMAX7219" weight=80
     //% block="Initialize MAX7219 |CS %cs |MOSI %mosi |SCK %sck"
     //% cs.defl=DigitalPin.P1 mosi.defl=DigitalPin.P2 sck.defl=DigitalPin.P0
     export function InitMAX7219(cs: DigitalPin, mosi: DigitalPin, sck: DigitalPin) {
@@ -35,7 +35,7 @@ namespace DotMatrix {
         pins.digitalWritePin(MAX7219_PIN_CS, 1)
     }
 
-    //% blockId="ClearAll" weight=70
+    //% group="8X8点阵屏" blockId="ClearAll" weight=70
     //% block="Clear all LEDs"
     export function ClearAll() {
         for (let i = 1; i <= 8; i++)
@@ -48,15 +48,15 @@ namespace DotMatrix {
         for (let i = 1; i <= 8; i++)
             WriteRegister(i, 0xFF)
     }
-
-    //% blockId="SetBrightness" weight=70
+    
+    //% group="8X8点阵屏" blockId="SetBrightness" weight=70
     //% block="Set brightness level $level"
     //% level.min=0 level.max=15 level.defl=15
     export function SetBrightness(level: number) {
         WriteRegister(MAX7219_REG_INTENSITY, level)
     }
 
-    //% blockId="Showdot" weight=70
+    //% group="8X8点阵屏" blockId="Showdot" weight=70
     //% block="Show dot X %x| Y %y"
     //% x.min=0 x.max=7
     //% y.min=0 y.max=7
@@ -66,7 +66,7 @@ namespace DotMatrix {
         WriteRegister(x, data)
     }
 
-    //% blockId="ShowCustText" weight=70
+    //% group="8X8点阵屏" blockId="ShowCustText" weight=70
     //% block="Show customize array %text"
     //% text.defl="B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000,B00000000"
     export function ShowCustText(text: string) {

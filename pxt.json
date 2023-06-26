@@ -5,7 +5,8 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "pxt-dotmatrix": "github:YunhaoHuang007/pxt-DotMatrix#v0.0.1"
     },
     "files": [
         "README.md",
